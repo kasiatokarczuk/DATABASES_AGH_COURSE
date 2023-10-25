@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-10-18T15:24:20.278Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.2 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="8MOtQGC7u1lGCysYcXI1" version="22.0.2" type="device">
+<mxfile host="Electron" modified="2023-10-19T14:24:16.395Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.2 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="l50Ds4IJhm4AwlJIZJHd" version="22.0.2" type="device">
   <diagram id="cdb5e136-1861-7ef1-5e76-c57f7e18aa8d" name="ERD Data Structure - Habit Tracker App">
-    <mxGraphModel dx="1303" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1121" dy="758" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -76,7 +76,7 @@
         <mxCell id="ZO5YnXLLY7kPNoLdBbJc-52" value="" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;" parent="ZO5YnXLLY7kPNoLdBbJc-51" vertex="1" connectable="0">
           <mxGeometry width="30" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="KLVzHexHmDjTVUYjCdbt-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=ERzeroToMany;endFill=0;startArrow=ERoneToMany;startFill=0;" edge="1" parent="4a63a70a29bb4ada-32" source="ZO5YnXLLY7kPNoLdBbJc-53">
+        <mxCell id="KLVzHexHmDjTVUYjCdbt-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=ERzeroToMany;endFill=0;startArrow=ERone;startFill=0;" parent="4a63a70a29bb4ada-32" source="ZO5YnXLLY7kPNoLdBbJc-53" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="240" y="-80" as="targetPoint" />
           </mxGeometry>
@@ -231,19 +231,19 @@
         <mxCell id="iN7UmCvl9B50hkMT7a_J-20" value="" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;" parent="iN7UmCvl9B50hkMT7a_J-19" vertex="1" connectable="0">
           <mxGeometry width="30" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="KLVzHexHmDjTVUYjCdbt-21" value="" style="endArrow=ERzeroToMany;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=ERoneToMany;startFill=0;endFill=0;" edge="1" parent="1" source="ZO5YnXLLY7kPNoLdBbJc-16">
+        <mxCell id="KLVzHexHmDjTVUYjCdbt-21" value="" style="endArrow=ERzeroToMany;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=ERone;startFill=0;endFill=0;" parent="1" source="ZO5YnXLLY7kPNoLdBbJc-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="500" y="230" as="sourcePoint" />
             <mxPoint x="380" y="126" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KLVzHexHmDjTVUYjCdbt-27" value="" style="endArrow=ERzeroToMany;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERoneToMany;startFill=0;endFill=0;" edge="1" parent="1" target="5ecfb9fce94ea102-5">
+        <mxCell id="KLVzHexHmDjTVUYjCdbt-27" value="" style="endArrow=ERone;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERzeroToMany;startFill=0;endFill=0;" parent="1" target="5ecfb9fce94ea102-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="800" y="105" as="sourcePoint" />
             <mxPoint x="900" y="109" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KLVzHexHmDjTVUYjCdbt-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmandOne;endFill=0;startArrow=ERzeroToMany;startFill=0;entryX=1.001;entryY=0.674;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4a63a70a29bb4ada-15" target="iN7UmCvl9B50hkMT7a_J-5">
+        <mxCell id="KLVzHexHmDjTVUYjCdbt-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmandOne;endFill=0;startArrow=ERzeroToMany;startFill=0;entryX=1.001;entryY=0.674;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="4a63a70a29bb4ada-15" target="iN7UmCvl9B50hkMT7a_J-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1120" y="320" as="targetPoint" />
             <Array as="points">
@@ -252,7 +252,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="KLVzHexHmDjTVUYjCdbt-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=ERzeroToMany;endFill=0;startArrow=ERone;startFill=0;" edge="1" parent="1">
+        <mxCell id="KLVzHexHmDjTVUYjCdbt-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=ERzeroToMany;endFill=0;startArrow=ERone;startFill=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="460" y="160" as="targetPoint" />
             <mxPoint x="519.9999999999999" y="315" as="sourcePoint" />
