@@ -1,0 +1,70 @@
+ZADANIE 1
+
+QUERY PLAN
+Hash Join  (cost=415.95..1581.22 rows=279 width=44) (actual time=1.683..8.894 rows=486 loops=1)
+  Hash Cond: (soh.customerid = c.customerid)
+  ->  Seq Scan on salesorderheader soh  (cost=0.00..1082.65 rows=31465 width=32) (actual time=0.025..2.611 rows=31465 loops=1)
+  ->  Hash  (cost=413.75..413.75 rows=176 width=16) (actual time=1.631..1.633 rows=176 loops=1)
+        Buckets: 1024  Batches: 1  Memory Usage: 16kB
+        ->  Seq Scan on customer c  (cost=0.00..413.75 rows=176 width=16) (actual time=0.015..1.602 rows=176 loops=1)
+              Filter: (territoryid = 5)
+              Rows Removed by Filter: 19644
+Planning Time: 0.421 ms
+Execution Time: 9.734 ms
+
+
+QUERY PLAN
+Hash Join  (cost=183.14..1348.41 rows=279 width=44) (actual time=0.157..7.150 rows=486 loops=1)
+  Hash Cond: (soh.customerid = c.customerid)
+  ->  Seq Scan on salesorderheader soh  (cost=0.00..1082.65 rows=31465 width=32) (actual time=0.010..2.507 rows=31465 loops=1)
+  ->  Hash  (cost=180.94..180.94 rows=176 width=16) (actual time=0.133..0.135 rows=176 loops=1)
+        Buckets: 1024  Batches: 1  Memory Usage: 16kB
+        ->  Bitmap Heap Scan on customer c  (cost=5.65..180.94 rows=176 width=16) (actual time=0.032..0.107 rows=176 loops=1)
+              Recheck Cond: (territoryid = 5)
+              Heap Blocks: exact=24
+              ->  Bitmap Index Scan on idx_territoryid  (cost=0.00..5.61 rows=176 width=0) (actual time=0.022..0.022 rows=176 loops=1)
+                    Index Cond: (territoryid = 5)
+Planning Time: 4.733 ms
+Execution Time: 7.225 ms
+
+Porównanie wyników:
+Po użyciu indeksów poprawiła się wydajność zapytania. Wskazują na to np. zmniejszenie kosztu operacji na tabeli sales.customer, mniejszy execution time. Można więc stwierdzić iż indeksy potrafią szybko odnajdywać i ograniczać liczbę rekordów, które muszą być przeszukane, co zazwyczaj poprawia wydajność. Szczególnie można to zaobserwować na dużych zbiorach danych.
+
+
+
+
+ZADANIE 2
+--a)
+BEGIN TRANSACTION;  --rozpoczęcie transakcji
+
+UPDATE Production.Product
+SET ListPrice = ListPrice * 1.1
+WHERE ProductID = 680;
+
+COMMIT;  --zatwierdzenie
+
+
+--b)
+BEGIN TRANSACTION;
+
+DELETE FROM Production.Product
+WHERE ProductID = 707;
+
+ROLLBACK; --wycofanie transakcji
+COMMIT;   
+
+
+--c)
+BEGIN TRANSACTION;
+
+INSERT INTO Production.Product (Name, ListPrice, ...)
+VALUES ('New Product', 100.00, ...);
+
+COMMIT;
+
+
+
+
+
+
+
