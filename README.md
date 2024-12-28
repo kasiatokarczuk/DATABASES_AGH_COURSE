@@ -10,5 +10,5 @@ This repository contains a collection of exercises and projects from my studies,
 
 
 ## Structure
-The repository is organized into folders, each corresponding to a specific topic or exercise:
+The repository is organized into folders, each corresponding to a specific topic or exercise
 
